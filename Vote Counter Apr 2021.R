@@ -1,6 +1,7 @@
 # Elections Vote Counting
 # 6 Apr 2021
 # Bernard Boey (bernard@u.yale-nus.edu.sg)
+# Source code available on: https://github.com/bernardboey/stugov-vote-counting
 
 
 
@@ -28,6 +29,7 @@ position_columns <- c(8, 10, 12, 14, 16, 18)
 
 # Set to TRUE to print out debugging info for tie breaking
 debug <- FALSE
+
 
 
 #### CLEANING ####
@@ -104,8 +106,6 @@ generate_ranks_df <- function(list_of_raw_votes) {
   return(ranks_df)
 }
 
-
-# TODO: MAKE ALL OTHER VOTES NA IF WE ENCOUNTER NA
 
 # parse_and_add_ranking parses a raw_vote (e.g. "A=>2,B=>1,C=>3") and
 # adds the rankings to the ranks_df (i.e. adding a row to ranks_df)
